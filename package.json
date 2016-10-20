@@ -330,6 +330,11 @@
             "author":"MavensMate",
             "params":[
                 {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"SobjectHandler"
+                },
+                {  
                     "name":"obj_name",
                     "description":"Triggered Object API Name",
                     "default":"SobjectApiName"
