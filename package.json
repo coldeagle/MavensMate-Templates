@@ -324,6 +324,19 @@
             ]
         },
         {  
+            "name":"Trigger Factory Handler",
+            "file_name":"TriggerFacotryHandler.cls",
+            "description":"Trigger Factory Handler",
+            "author":"MavensMate",
+            "params":[
+                {  
+                    "name":"obj_name",
+                    "description":"Triggered Object API Name",
+                    "default":"SobjectApiName"
+                }
+            ]
+        },
+        {  
             "name":"Trigger Handler",
             "file_name":"TriggerHandler.cls",
             "description":"An Interface that handles Trigger actions",
@@ -472,6 +485,29 @@
         }
     ],
     "ApexTrigger":[  
+        {  
+            "name":"Trigger Facotry Trigger",
+            "file_name":"ApexTriggerFactory.trigger",
+            "description":"Basic Apex Trigger template",
+            "author":"MavensMate",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Apex Trigger API Name",
+                    "default":"SobjectTrigger"
+                },
+                {  
+                    "name":"object_name",
+                    "description":"Object API Name",
+                    "default":"Sobject"
+                },
+                {
+                    "name":"handler_api_name",
+                    "description":"The API name of the handler",
+                    "default":"SobjectHandler"
+                }
+            ]
+        },
         {  
             "name":"Apex Trigger",
             "file_name":"ApexTrigger.trigger",
