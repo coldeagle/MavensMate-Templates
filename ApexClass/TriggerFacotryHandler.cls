@@ -1,4 +1,4 @@
-public with sharing class {{ obj_name }}Handler implements ITrigger {
+public with sharing class {{ api_name }} implements ITrigger {
     private {{ obj_name }}Gateway {{ obj_name }}Gw = new {{ obj_name }}Gateway;
 
     /**
