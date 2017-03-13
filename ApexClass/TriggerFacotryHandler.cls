@@ -1,5 +1,5 @@
 public with sharing class {{ api_name }} implements ITrigger {
-    private {{ obj_name }}Gateway {{ obj_name }}Gw = new {{ obj_name }}Gateway;
+    private static {{ obj_name }}Gateway {{ api_name }}Gw = new {{ obj_name }}Gateway();
 
     /**
      * bulkBefore
@@ -74,6 +74,26 @@ public with sharing class {{ api_name }} implements ITrigger {
     public void afterUpdate(SObject oldSo, SObject so) {
         {{ obj_name }} sobj = ({{ obj_name }})so;
         {{ obj_name }} oldSobj = ({{ obj_name }})oldSo;
+    }
+    
+    /**
+     * afterDelete
+     *
+     * This method is called iteratively for each record deleted during an AFTER
+     * trigger.
+     */
+    public void afterDelete(SObject so) {
+        {{ obj_name }} sobj = ({{ obj_name }})so;
+    }
+
+    /**
+     * andFinally
+     *
+     * This method is called once all records have been processed by the trigger. Use this
+     * method to accomplish any final operations such as creation or updates of other records.
+     */
+    public void andFinally() {
+
     }
 
     public class {{ obj_name }}Gateway {
